@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link href="{% static 'css/file.css' %}" rel="stylesheet">
+</head>
+<body>
+<form method="get" >
+    <h1 align="center"> list all movies</h1>
+    {% if form %}
+    <table align="center" border="2px">
+        <thead>
+        <th>date</th>
+        <th>moviename</th>
+        <th>hero</th>
+        <th>heroine</th>
+        <th>ratings</th>
+        </thead>
+        {% for emp in form %}
+        <tr>
+            <td>{{ emp.date }}</td>
+             <td>{{ emp.moviename }}</td>
+             <td>{{ emp.hero }}</td>
+             <td>{{ emp.heroine }}</td>
+             <td>{{ emp.ratings }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        print('no movies list')
+
+        {% endif %}
+</form>
+</body>
+</html>

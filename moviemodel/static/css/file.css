@@ -1,0 +1,25 @@
+body{
+background:yellow;
+}
+h1{
+color:yellow;
+}
+table{
+background:green;
+color:yellow;
+}
+thead th{
+color:orange;
+}
+tr{
+color:white;
+}
+p{
+align:center
+}
+conatainer jumbotron{
+margin-top:150px;
+}
+a{
+text-align:center;
+}
